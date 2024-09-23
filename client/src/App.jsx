@@ -9,7 +9,7 @@ import Header from "./components/Header";
 import FooterCom from "./components/Footer";
 import PrivateRoute from "./components/PrivateRoute";
 import OnlyAdminPrivateRoute from "./components/OnlyAdminPrivateRoute";
-import CreatePost from "./components/CreatePost";
+import CreatePost from "./pages/CreatePost";
 
 const App = () => {
   return (
