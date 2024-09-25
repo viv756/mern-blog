@@ -25,7 +25,7 @@ const DashProfile = () => {
   const [imageFileUploadError, setImageFileUploadError] = useState(null);
   const [updateUserSuccess, setUpdateUserSuccess] = useState(null);
   const [updateUserError, setUpdateUserError] = useState(null);
-  const [showModel, setShowModel] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [imageFileUploading, setImageFileUploading] = useState(false);
   const [formData, setFormData] = useState({});
   const filePicker = useRef();
@@ -239,7 +239,7 @@ const DashProfile = () => {
           {error}
         </Alert>
       )}
-      <Modal show={showModel} onClose={() => setShowModel(false)} popup size="md">
+      <Modal show={showModal} onClose={() => setShowModal(false)} popup size="md">
         <Modal.Header />
         <Modal.Body>
           <div className="text-center">
@@ -251,7 +251,7 @@ const DashProfile = () => {
               <Button color="failure" onClick={handleDeleteUser}>
                 Yes, I am sure
               </Button>
-              <Button color="gray" onClick={() => setShowModel(false)}>
+              <Button color="gray" onClick={() => setShowModal(false)}>
                 No, cancel
               </Button>
             </div>
