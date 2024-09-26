@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from "firebase/storage";
 import { Alert, Button, FileInput, Select, TextInput } from "flowbite-react";
 import ReactQuill from "react-quill";
@@ -7,7 +8,6 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import { app } from "../firebase";
 import "react-quill/dist/quill.snow.css";
 import "react-circular-progressbar/dist/styles.css";
-import { useSelector } from "react-redux";
 
 const UpdatePost = () => {
   const { currentUser } = useSelector((store) => store.user);
